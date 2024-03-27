@@ -45,25 +45,124 @@ Although your friend has an excellent understanding of property prices in her ow
 ## Hypothesis and how to validate?
 
 **Hypothesis**
- * 
+
+According to my hypothesis there is several factors that impact the sale price of a house. After some researching in the field of real estate and my prior knowledge in i have come to this conclusion. 
+
+External factors:
+ - The location is the decisive factor of the sale price, and  accessibility to public transportation, grocery stores and school/preschool also impacts the value.
+
+Since we're trying to predict the sale price of houses in Ames in Iowa the location is not included in our dataset and we can't validate that.
+
+Beside external factors these factors that have the greatest impact on price:
+ - The overall quality.
+ - The size of the property, total square feet
+ - Number of bedrooms and bathrooms.
+ - The condition of kitchen and bathroom, newly renovated has a significant impact on sale price. 
+ - The Year it was built.
 
 **Validation**
- * 
+ - We can validate the hypothesis by conducting a Correlation  Study. 
+
+## The rationale to map the business requirements to the Data Visualizations and ML tasks
+
+**Business Requirement 1:** 
+
+ - Inspect the House Records data and conduct a Correlation study both spearman and pearson. 
+
+ - Visualize the correlation levels by Sale Price
+   - Plot the highest correlated variables against Sale Price to summarize the insights. 
 
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* 
+**Business Requirement 2:**
+
+ - Deliver an ML model with the capability of predicting the sale price of the four inherited houses and any house in 
+    Ames, Iowa with at least 75% accuracy.
+ 
+ - Conventional Machine Learning to map the relationships between the features and the target. This will be Involving:
+
+    - Applying a range of machine learning algorithms to capture the best model for our purpose.
+
+    - Once that is done we will conduct extensive hyperparameter optimization to fine-tune the performance, ensuring optimal results.
 
 ## ML Business Case
-* 
+
+**1. What are the business requirements?**
+
+- The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+
+- The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+
+**2. Is there any business requirement that can be answered with conventional data analysis?**
+
+- Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+
+**3. Does the client need a dashboard or an API endpoint?**
+
+- The client needs a dashboard.
+
+**4. What does the client consider as a successful project outcome?**
+
+- A study showing the most relevant variables correlated to sale price.
+
+- Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+
+**5. Can you break down the project into Epics and User Stories?**
+
+- Information gathering and data collection.
+
+- Data visualization, cleaning, and preparation.
+
+- Model training, optimization and validation.
+
+- Dashboard planning, designing, and development.
+
+- Dashboard deployment and release.
+
+**6. Ethical or Privacy concerns?**
+
+- No. The client found a public dataset.
+
+**7. Does the data suggest a particular model?**
+
+- The data suggests a regressor where the target is the sale price.
+
+**8. What are the model's inputs and intended outputs?**
+
+- The inputs are house attribute information and the output is the predicted sale price.
+
+
+**9. What are the criteria for the performance goal of the predictions?**
+
+- We agreed with the client an R2 score of at least 0.75 on the train set as well as on the test set.
+
+**10. How will the client benefit?**
+
+- The client will maximize the sales price for the inherited properties.
+
+
+
 
 
 ## Dashboard Design
-* Project Summary Page 
-* Summary Correlation study 
-* Housing Prediction Page
-* Hypothesis and validation Page
-* Model Performance Page
+
+**Page 1 - Project Summary**
+
+ - Summary of the dataset and the client's  requirements.
+
+**Page 2 - Summary of Correlation Study**
+
+ - Listing and Visualizing of the strongest correlated features to the Sale Price. 
+
+**Page 3 - Housing Prediction Page**
+
+ - The 4 houses' attributes and their respective predicted sale price as well as the summed predicted price for all 4 inherited houses. 
+
+   - Interactive input widgets to provide with real-time house data to predict the sale price.
+ 
+
+**Page 4 - Hypothesis and validation Page**
+
+**Page 5 - Model Performance Page**
 
 
 
