@@ -1,0 +1,6 @@
+{
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.createEnvironment.trigger": "prompt",
+    "python.defaultInterpreterPath": "/workspace/HeritageHousing/.venv/bin/",
+    "python.pipenvPath": "/workspace/HeritageHousing/.venv/bin/"
+}
