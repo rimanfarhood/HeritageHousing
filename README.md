@@ -46,7 +46,7 @@ Although your friend has an excellent understanding of property prices in her ow
 
 **Hypothesis**
 
-According to my hypothesis there is several factors that impact the sale price of a house. After some researching in the field of real estate and my prior knowledge in i have come to this conclusion. 
+According to my hypothesis there is several factors that impact the sale price of a house. After some researching in the field of real estate and my prior knowledge I have come to this conclusion. 
 
 External factors:
  - The location is the decisive factor of the sale price, and  accessibility to public transportation, grocery stores and school/preschool also impacts the value.
@@ -55,7 +55,7 @@ Since we're trying to predict the sale price of houses in Ames in Iowa the locat
 
 Beside external factors these factors that have the greatest impact on price:
  - The overall quality.
- - The size of the property, total square feet
+ - The size of the house, total square feet.
  - Number of bedrooms and bathrooms.
  - The condition of kitchen and bathroom, newly renovated has a significant impact on sale price. 
  - The Year it was built.
@@ -140,10 +140,18 @@ Beside external factors these factors that have the greatest impact on price:
 - The client will maximize the sales price for the inherited properties.
 
 
+## Dashboard 
 
+**Client Expectations:**
 
-
-## Dashboard Design
+- A project summary page, displaying dataset summary and the requirements.
+- A page listing the findings related to which features have the strongest correlation to the house sale price.
+- A page 
+   - Displaying the 4 houses' attributes and their respective predicted sale price.
+   - Displaying a message informing the summed predicted price for all 4 inherited houses. 
+   - Interactive input widgets that allows a user to provide real-time house data to predict the sale price.
+- A page indicating hypothesis(es) and validation.
+- A technical page displaying model performance. If a ML pipeline is deployed, Display the pipeline steps.
 
 **Page 1 - Project Summary**
 
