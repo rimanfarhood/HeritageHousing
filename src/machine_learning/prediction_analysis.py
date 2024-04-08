@@ -13,8 +13,8 @@ def predict_sale_price(X_live, sale_price_features, sale_price_pipeline):
 	value = float(proba.round(1))
 	amount = '${:,.2f}'.format(value)
 	statement = (
-		f'{amount} '
-	)
+		f'The House Sale Price Estimation For Given Values: **Sale Price {amount}**'
+		)
 
 	st.write(statement)
 		

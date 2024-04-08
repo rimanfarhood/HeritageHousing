@@ -11,11 +11,11 @@ from app_pages.page_model_performance import page_model_performance_body
 app = MultiPage(app_name= "Heritage Housing") # Create an instance of the app 
 
 # Add your app pages here using .add_page()
-app.app_page("Project Summary", page_summary_body)
-app.app_page("House Sale Price Study", page_study_body)
-app.app_page("Predict House Value", page_prediction_body)
-app.app_page("Project Hypothesis and Validation", page_hypothesis_body)
-app.app_page("ML: Predict House Value", page_model_performance_body)
+app.app_page("Heritage Housing Summary", page_summary_body)
+app.app_page("Hypothesis & Validation", page_hypothesis_body)
+app.app_page("Correlation Study", page_study_body)
+app.app_page("Housing Sale Price Prediction", page_prediction_body)
+app.app_page("ML Model Performance", page_model_performance_body)
 
 app.run() # Run the  app
 

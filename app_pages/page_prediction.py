@@ -14,13 +14,14 @@ def page_prediction_body():
 	version = 'v1'
 	pipeline = load_pkl_file(f"outputs/ml_pipeline/predict_SalePrice/{version}/pipeline.pkl")
 	sale_price_features = (pd.read_csv(f"outputs/ml_pipeline/predict_SalePrice/{version}/X_train.csv").columns.to_list())
-	st.write("### Predict House Sale Price")
-	st.info(
+	st.write("# Prediction House Sale Price")
+	st.write("---")
+	st.subheader("Business Requirement 2")
+	st.write(
 		"* 2 - The client is interested to predict the house sale price for their 4 "
 		"inherited houses, and any other house in Ames, Iowa. "
 		)
-
-
+	
 	in_df = inherited_house_data()
 
 	house1 = in_df.iloc[[0]]
@@ -29,6 +30,7 @@ def page_prediction_body():
 	house4 = in_df.iloc[[3]]
 
 	features = ['GarageArea', 'GrLivArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt']
+	st.write("#### Summed Value for the inherited houses is: **625 133.3$** ")
 
 	# predict on live data
 	
@@ -37,18 +39,6 @@ def page_prediction_body():
 	price3 = predict_sale_price(house3, features, pipeline)
 	price4 = predict_sale_price(house4, features, pipeline)
 
-	
-
-	st.write("---")
-	
-		
-	st.write()
-	st.write(f"Summed Value for the inherited houses is: 625 133.3$ ")
-		
-	st.write()
-		
-	st.write("---")
-
 	st.write("---")
 	st.write("Below you can enter the data of the houses you want an estimated price for. "
 			"The default values are set to median values of the data set, in case you are missing any. ")
@@ -56,9 +46,8 @@ def page_prediction_body():
 	X_live = DrawInputsWidgets()
 
 	if st.button('Predict Sale Price'):
+		st.write("**The Predicted Sale Price:**")
 		predict_sale_price(X_live, sale_price_features, pipeline)
-
-
 
 
 def DrawInputsWidgets():

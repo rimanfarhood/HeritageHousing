@@ -8,8 +8,9 @@ def page_hypothesis_body():
         "After some researching in the field of real "
         "estate and my prior knowledge I have come to this hypothesis."
     )
+    st.write("---")
     st.write("**Hypothesis**")
-    st.info(
+    st.write(
         "Beside from external factors, these are the factors that have the "
         "greatest impact on the sale price according to my hypothesis:\n\n"
         "- The overall quality.\n\n"
@@ -19,10 +20,11 @@ def page_hypothesis_body():
         " a great impact on sale price.\n\n" 
         "- The Year it was built.\n\n"
     )
+    st.write("---")
 
     st.write("**Validation**")
     st.write("We validate the hypothesis by conducting a Correlation Study.")
-    st.success(
+    st.write(
         "**The Correlation study validates that:**\n\n"
         "- The Sale Price tends to be higher for houses with better **Overall "
         "Quality 'OverallQual'**, affirming the first point of the hypothesis."

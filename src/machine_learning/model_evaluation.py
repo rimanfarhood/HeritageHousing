@@ -11,10 +11,13 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 def regression_performance(X_train, y_train, X_test, y_test, pipeline):
     st.write("Model Evaluation \n")
-    st.info("* Train Set")
+    st.write("**Train Set**")
     st.write(regression_evaluation(X_train, y_train, pipeline))
-    st.info("* Test Set")
+    
+    st.write("**Test Set**")
     st.write(regression_evaluation(X_test, y_test, pipeline))
+    st.write(regression_evaluation_plots(X_train, y_train, X_test, y_test, pipeline))
+
 
 
 def regression_evaluation(X, y, pipeline):
@@ -46,5 +49,4 @@ def regression_evaluation_plots(X_train, y_train, X_test, y_test, pipeline, alph
     axes[1].set_xlabel("Actual")
     axes[1].set_ylabel("Predictions")
     axes[1].set_title("Test Set")
-
     st.pyplot(fig)
