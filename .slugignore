@@ -1,7 +1,6 @@
-.venv/
+.venv
 __pycache__/
 *.pyc
-*.md
 .devcontainer/
 .gitignore
 .gitpod.yml
@@ -14,3 +13,4 @@ __pycache__/
 node_modules/
 .github/
 cloudinary_python.txt
+README.md
