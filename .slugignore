@@ -1,16 +1,25 @@
+# Python environments and cache
 .venv
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Development and version control settings
 .devcontainer/
 .gitignore
 .gitpod.yml
+
+# Specific core dumps and logs to exclude
 core.Microsoft*
 core.mongo*
 core.python*
+
+# Configuration and sensitive info
 env.py
-__pycache__/
-*.py[cod]
+
+# Dependency directories
 node_modules/
+
+# GitHub configuration and documentation
 .github/
 cloudinary_python.txt
 README.md
