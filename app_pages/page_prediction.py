@@ -6,8 +6,6 @@ from src.machine_learning.prediction_analysis import predict_sale_price
 from datetime import date
 
 
-
-
 def page_prediction_body():
 
 	# load predict sale_price files	
@@ -18,7 +16,7 @@ def page_prediction_body():
 	st.write("---")
 	st.subheader("Business Requirement 2")
 	st.write(
-		"* 2 - The client is interested to predict the house sale price for their 4 "
+		"* The client is interested to predict the house sale price for their 4 "
 		"inherited houses, and any other house in Ames, Iowa. "
 		)
 	
@@ -29,20 +27,22 @@ def page_prediction_body():
 	house3 = in_df.iloc[[2]]
 	house4 = in_df.iloc[[3]]
 
-	features = ['GarageArea', 'GrLivArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt']
+	features = [
+		'GarageArea', 'GrLivArea', 
+		'OverallQual','TotalBsmtSF', 
+		'YearBuilt']
 	st.write("#### Summed Value for the inherited houses is: **625 133.3$** ")
 
-	# predict on live data
-	
-	price1 = predict_sale_price(house1, features, pipeline)
-	price2 = predict_sale_price(house2, features, pipeline)
-	price3 = predict_sale_price(house3, features, pipeline)
-	price4 = predict_sale_price(house4, features, pipeline)
+	st.write("**Sale Price for each Inherited House:**")	
+	predict_sale_price(house1, features, pipeline)
+	predict_sale_price(house2, features, pipeline)
+	predict_sale_price(house3, features, pipeline)
+	predict_sale_price(house4, features, pipeline)
 
 	st.write("---")
-	st.write("Below you can enter the data of the houses you want an estimated price for. "
-			"The default values are set to median values of the data set, in case you are missing any. ")
+	st.write("Below you can enter the data of the houses you want an estimated price for.")
 
+	# predict on live data
 	X_live = DrawInputsWidgets()
 
 	if st.button('Predict Sale Price'):
@@ -70,8 +70,8 @@ def DrawInputsWidgets():
 	with col1:
 		feature = "OverallQual"
 		st_widget = st.number_input(
-			label= feature,
-			min_value= 0, 
+			label= 'Overall Quality: Rates the overall material and finish of the house: 1 - 10',
+			min_value= 1, 
 			max_value= 10,
             step = 1       
 			)
@@ -80,8 +80,9 @@ def DrawInputsWidgets():
 	with col2:
 		feature = "GrLivArea"
 		st_widget = st.number_input(
-			label= feature,
-			min_value= 1, 
+			label= 'Above grade (ground) living area square feet: 334 - 5642',
+			min_value= 334,
+			max_value= 5642, 
             step= 10
 			)
 	X_live[feature] = st_widget
@@ -89,8 +90,9 @@ def DrawInputsWidgets():
 	with col3:
 		feature = "TotalBsmtSF"
 		st_widget = st.number_input(
-			label= feature,
-			min_value=1, 
+			label= 'Total square feet of basement area: 0 - 6110',
+			min_value= 0,
+			max_value= 6110, 
             step= 10
 			)
 	X_live[feature] = st_widget
@@ -98,8 +100,9 @@ def DrawInputsWidgets():
 	with col4:
 		feature = "GarageArea"
 		st_widget = st.number_input(
-			label= feature,
-			min_value= 1, 
+			label= "Garage Area: Size of garage in square feet: 0 - 1418",
+			min_value= 0,
+			max_value= 1418, 
             step= 10
 			)
 	X_live[feature] = st_widget
@@ -107,8 +110,9 @@ def DrawInputsWidgets():
 	with col5:
 		feature = "YearBuilt"
 		st_widget = st.number_input(
-			label= feature, 
-			max_value= date.today().year,
+			label= "Year Built: Original construction date: 1872-2010", 
+			min_value= 1872,
+			max_value= 2010,
             step= 1
 			)
 	X_live[feature] = st_widget

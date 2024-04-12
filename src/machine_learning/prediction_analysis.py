@@ -17,5 +17,3 @@ def predict_sale_price(X_live, sale_price_features, sale_price_pipeline):
 		)
 
 	st.write(statement)
-		
-	#st.write(proba)

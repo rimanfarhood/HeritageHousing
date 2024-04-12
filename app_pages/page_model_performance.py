@@ -17,9 +17,6 @@ def page_model_performance_body():
     y_train = pd.read_csv(f"outputs/ml_pipeline/predict_SalePrice/{version}/y_train.csv")
     y_test = pd.read_csv(f"outputs/ml_pipeline/predict_SalePrice/{version}/y_test.csv")
 
-    #y_train = y_train.to_numpy().flatten()
-    #y_test = y_test.to_numpy().flatten()
-
     st.write("### Model Performance")
     # Display pipeline training summary conclusions
     st.write(
