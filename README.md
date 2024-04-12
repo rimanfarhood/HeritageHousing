@@ -168,10 +168,14 @@ Beside external factors these factors that have the greatest impact on price:
    - Interactive input widgets to provide with real-time house data to predict the sale price.
  
 
-**Page 4 - Hypothesis and validation Page**
+**Page 4 - Hypothesis and Validation Page**
+
+   - The Hypothesis
+   - And Validation 
 
 **Page 5 - Model Performance Page**
 
+   - Model Performance Metrics
 
 
 ## Unfixed Bugs
@@ -198,12 +202,14 @@ Beside external factors these factors that have the greatest impact on price:
 
 ## Credits 
 
+- Churnometer Walkthrough 
+- 
+
 ### Content 
 
 - The text for the Home page was taken from Wikipedia Article A
 - Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
 
 ## Acknowledgements (optional)
 * In case you would like to thank the people that provided support through this project.
