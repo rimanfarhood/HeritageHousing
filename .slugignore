@@ -13,8 +13,8 @@ core.Microsoft*
 core.mongo*
 core.python*
 
-# Configuration and sensitive info
-env.py
+# Jupyter Notebooks
+jupyter_notebooks/
 
 # Dependency directories
 node_modules/
