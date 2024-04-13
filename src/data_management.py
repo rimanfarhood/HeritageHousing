@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
-@st.cache_data
+@st.cache(suppress_st_warning=True, allow_output_mutation=True)
 def housing_data():
     df = pd.read_csv("outputs/datasets/cleaned/CleanedHousePricing.csv")
     return df
